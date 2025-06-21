@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<!--
+Fraude dossier médical : 
+les psychiatre mon mi une epilepsy 
+contre les résultats des neurologue dans les années 2005
+il m'ont mis de la consommation de 
+cocaïne je n'ai jamais souhaité ensemble 
+consommer 
+.. 
+papa conserver des flacon dans les années 2006-2007 de lecd
+papa m'a tabasser presque jusqu'à mort à plusieurs reprises et 
+c'est fait passer pour victime 
+le constat que j'ai pu voir sur mon père 
+c'est que à chaque fois que je l'ai surveiller il faisait des choses extrêmement graves et dangereuse 
+ou maltraitante à mon insue 
+...
+il a été très violent physiquement avec moi pendant 28 ans j'ai trente quatre ans aujourd'hui..
+et finalement suis-je malade 
+ou victime..
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="MathJax-script" async src="/MathJax-master/es5/tex-svg.js"></script> 
+  <script>
+  
+  MathJax = {
+    tex: {
+      tags: 'ams'  // should be 'ams', 'none', or 'all'
+    }
+  };
+  </script>
+	<link rel="stylesheet" href="/Css/std.css">
+  <title>En cours de rédaction /Adrien/</title>
+</head>
+
+<body>
+  <div style='height: 32px;font-size:24px;text-align:center;'>
+    akoerakoerman@gmail.com
+  </div>
+  <h1>Cliques de scénario et 
+  sous-formules</h1>
+  <div>
+    En cours de rédaction [<name>Ak-R </name>]
+  </div>
+  <p>
+  On se donne une signature 
+  \(\mathcal{L}\) du premier ordre
+  puis on se donne \(F\left(u, v, t\right)\) une formule du premier ordre sur \(\mathcal{L}\) on notera&nbsp;: 
+  \[
+  \mathrm{sf}\left(F\right)
+  \] 
+  l'ensemble des sous-formules de \(F\) <span class='todo'> et on note...</span>
+  maintenant on suppose que \(\mathcal{L}\) contient un symbole de prédicat 
+  \(\leq_\mathcal{L}\) qui représentera un pré-ordre, 
+  dans ce cas là, on dira que \(\left(\mathcal{L}, F\right)\) 
+  et sénarisable.</p>
+  <h3>Les assertion sur les structures de \(\mathcal{L}\)</h3>
+  <p>
+  Si \(t\in M\) et si on a&nbsp;: 
+  \(
+  \underline{A}:=\left(A_0,A_1\right)
+  \)
+  sont deux ensemble
+  de formules de 
+  \(\mathcal{L}\)
+  alors on écrit de la façon suivante&nbsp;:
+  \[
+  M\vDash_* F\left\{a_0,a_1,t \right\}
+  \] 
+  si et seulement si 
+  \[
+  \exists \left(a_0,a_1\right)\in \underline{A}
+  \exists u, v\in M
+  \left(
+  M\vDash
+  a_i\left(u,v\right)
+  \wedge
+  F\left(u, v, t\right)
+  \right)
+  \]  pour i=0..1.</p>
+  <h4>Une nuances a constaté&nbsp;: </h4>
+  <p>
+    On vas modifier un peu la définition
+    \(
+    M\vDash F\left\{u, v, t\right\}
+    \)  
+    de la façon suivante&nbsp;: 
+    \[
+    M\vDash_* F^-\left\{u,v,t\right\} 
+    \] 
+    et réaliser si et seulement si&nbsp;: 
+    \[
+    \exists \left(a_0,a_1\right)\in \underline{A}\exists u, v\in M\left(
+    M\vDash \wedge_ia_i\left(u, v\right)\wedge F\left(u, v, t\right)
+    \right)
+    \] 
+    on a donc&nbsp;:
+    \[
+    M\vDash_* F\left\{u, v, t\right\}\Leftrightarrow M\vDash_* F^-\left\{u, v, t\right\}. 
+    \]
+  
+  <abbr>i.e.</abbr>
+  c'est deux définition sont équivalente mais leur 
+  "sous-formules" ne sont pas les même 
+  lorsque, par exemple on les 
+  représente avec un système ( LK algèbre universel.. )
+  il est à noter que l'on a juste quelques par distribué le \(\wedge\) sur le \(\exists\) 
+    </p>
+  </div>
+  <h3>Les valeurs sur les structures de \(\mathcal{L}\)</h3>
+  <div>
+   <h4>Juste quelques abréviations</h4>
+   <ul>
+     <li>
+       Pour tout objet \(u\) et \(v\) on définit&nbsp;: 
+        \[
+        \bar{uv}
+        :=
+        \left(u, v, u, v\right).
+        \] 
+        </li>
+        <li>
+          Pour toute formules \(F\) et \(G\) du premier ordre on définit&nbsp;: 
+          \[
+          \left(F, G\right)_M:=
+          \left(F_M, G_M\right).
+          \] 
+        </li>
+    </ul>
+    ( juste par soucis de place ) 
+  </div>
+  <p>
+ On définit des valeurs de 
+ \(\left(F, A\right)\) 
+ de la façon suivante&nbsp;: 
+  \[
+  \mathcal{V}_M\left(F, A\right) 
+  :=
+  \left\{
+ \left(
+ Z, 
+ u, 
+ v,
+ t
+ \right)\in M^7\vert\exists p, q\in \underline{A}\left(M
+ \vDash_* F\left\{p, q, t\right\}
+ \text{ et }
+ \bar{uv}\in Z=\left(p, q\right)_M
+ \right) 
+ \right\}. 
+  \]
+  
+  </p>
+  
+  <h2>
+    Les pré-cliques de scénarios 
+  </h2>
+ <div>
+   <h3>Les sous-formules et le temps dans sont interaction avec les événements</h3>
+   <p>On peut par exemple suposser que \(a_0, a_1\) représente deux événements puis \(t\) le temps.</p>
+   <p>
+    On peut dire que si \(M\vDash a_i\left(u, v\right)\) alors \(a_i\) et un 
+    événement de \(O\left(u, v\right)\) où \(O\left(u, v\right)\) représente quelques chose 
+    qui ne dépend que
+    de \(u\) et \(v\) et si 
+    \[
+    M\vDash_*
+    F\left\{a_0,a_1,t\right\}
+    \] 
+    alors on peut 
+    supposer que 
+    \(F\left(u, v\right)\) représente une 
+    assertion sur 
+    l'object \(O\)  
+    réalisé ou non à l'instant \(t\) et dependent de deux autres 
+    paramètres \(u, v\) par exemple on
+    peut prendre l'état de quelques que chose ou 
+    de façon plus pertinentes
+    pour ce que l'on veut représenter
+    
+    ici on peut voir \(u\) et \(v\) comme des informations sur deux systèmes
+    distinct notamment pour deux joueurs
+    et 
+    leur
+    environnement 
+    totalement 
+    d'écrit par
+    \(u\)
+    <abbr>resp.</abbr> \(v\) et éventuellement \(t\).
+    </p>
+
+    <p>
+      [] 
+    </p>
+    <h3>Les Graphes de représentation </h3>
+    <p>
+    Tout d'abord 
+    on peut former des graphes dont les nœud sont dans \(M\) 
+    et dont les arrete sont formés par des 
+    éléments \(u\) et \(v\) de \(M\) 
+    respectent 
+    nécessairement la condition&nbsp;: 
+    \[
+    \left(Z, u, v\right)
+    \in
+    \mathcal{V}_M\left(F, A, t\right)\text{ et }
+    Z\in K\left(u, v, t\right)
+    \] 
+    
+    par exemple lorsque \(t\)
+    
+    décrit un ensemble
+    de la forme
+    \(\tau_*\left(u, v\right)\)
+    et où \(\tau:=\left(M,\tau_*\right),\)
+    on obtient ainsi 
+    un graphe   
+    \(
+   \mathcal{G}_\tau\left(K,F, A\right)
+    \) et 
+    on les appelle des graphe de représentation sur \(\tau.\)
+    Ansi&nbsp;: 
+    \[
+      \mathcal{G}_\tau
+      \left(K,F\wedge G, A\right)=\mathcal{G}_\tau
+      \left(K\cap G_M, F, A\right) .
+    \] 
+    On appelle cette forme d'égalité une propriété de syntaxe-algébriques, car lorsque que l'on change les 
+    argument de places il nous faut échanger 
+    la formule par sa valeur et réciproquement... 
+    </p>
+    <p>Soit \(\underline{A}:=\left(A_0\left(u, v\right), A_1\left(u, v\right)\right) \) un couple de formules alors 
+      on peut définir un connecteur \(.\) externe 
+      qui a chaque formule 
+      \(\lambda\left(u, v\right) \)
+      à deux variables de formules on définit ce connecteur par synonymie de la façon suivante&nbsp;: 
+      \[
+      \lambda.A
+      :=
+      \left(\lambda\wedge A_0, \lambda\wedge A_1\right)
+      \] 
+Alors on obtient une égalité syntaxe-algébriques&nbsp;: 
+\[
+\mathcal{G}_\tau
+\left(K,F, \lambda. A\right)
+=
+\mathcal{G}_\tau
+\left(K, \lambda\wedge F, A\right)
+=
+\mathcal{G}_\tau
+\left(K\cap \tilde\lambda_M, 
+F, 
+A\right).
+\] 
+où 
+   \(\tilde\lambda\left(u, v, t\right)
+     :=
+     \lambda\left(u, v\right)\wedge t\simeq t. 
+   \)
+   
+
+    <span class='box'>
+      On a aussi les propriétés suivantes&nbsp;:
+    \[
+    \mathcal{G}_\tau
+    \left(
+    \bigcup_j K_j,
+    F,
+    A
+    \right)
+    =
+    \bigcup_j
+    \mathcal{G}_\tau
+    \left(
+    K_j, 
+     F, 
+     A 
+    \right)
+    \]
+
+    \[
+    \mathcal{G}_\tau
+    \left(
+    \bigcap_j K_j, 
+    G, 
+    A
+    \right)
+    =
+    \bigcap_j
+    \mathcal{G}_\tau
+    \left(
+       K_j
+       ,
+       F
+       , 
+       A
+    \right).
+    \]
+   </span>
+  
+
+  <span class='box'>
+    Ensuite on peut constaté que&nbsp;: 
+   \[
+   \mathcal{G}_\tau
+   \left(
+   K,F\vee G,A
+   \right)
+   =
+   \mathcal{G}_\tau
+   \left(
+   K,F, A
+   \right)
+   \cup
+   \mathcal{G}_\tau
+   \left(
+   K, G, A
+   \right)
+   \]
+  </span>
+   </p>
+   <h4>Une topologie canonique sur la collection des graphe de représentation</h4>
+   <p>
+    Déjà on peut constater que seul sur  la première variable
+    on peut former des union ou des intersection non 
+    finit, cependant sur les trois variables on peut commuter les intersection/union finie .
+   <span class='box'>
+     On peut former des éléments de la formes&nbsp;: 
+     \[
+     \mathcal{G}H_\tau
+     \left(K,\mathcal{F},A\right) 
+     := 
+     \bigcup_{f\in F} 
+     \mathcal{G}_\tau
+     \left(K, 
+     H\left(f\right), 
+     A
+     \right)
+     \]
+     sans pour autant qu'il ne corresponde une formule \(F\) tell que&nbsp;:
+     \[   
+     \mathcal{G}H_\tau
+     \left(K,\mathcal{F},A\right)
+     =
+     \mathcal{G}_\tau
+     \left(
+     K, 
+     F, 
+     A
+     \right) 
+     \] 
+    On notera dans ce cas là&nbsp;:
+    
+    \[
+    \left(H,K,\mathcal{F}, A\right)
+    \in
+    \mathcal{KG}_\tau,\] on obtient ainsi une collection, mais puisque  \(\mathcal{F},\mathrm{Im} \left(H\right)\) et \(A\) sont des ensembles, il en va de même pour 
+    \(\mathcal{KG}_\tau.\)
+   </span>
+   On peut définir un ensemble de la façon suivante&nbsp;: 
+   \[
+   \mathcal{C}_\tau\left(P\right)
+   :=
+   \left\{
+  \mathcal{G}H_\tau
+   \left(K, 
+   \mathcal{F}, 
+   A
+   \right)
+   ;
+   \left(H, K,\mathcal{F}, A\right)
+   \in P
+   \right\}. 
+  \] 
+  On constate que 
+  \(\mathcal{C}_\tau\left(P\right) \) peut ce décomposer en
+  deux parties disjointes&nbsp;:
+  \[
+  \mathcal{C}_\tau\left(P\right)
+  :=\mathcal{C}_\tau\left(P^-_\tau\cup P^+_\tau\right)
+  :=\mathcal{C}^-_\tau
+  \left(
+  P
+  \right)
+  \cup 
+  \mathcal{C}^+_\tau
+  \left(
+  P
+  \right) 
+  \] 
+  où 
+
+  \[
+  \begin{cases}
+  P^+_\tau
+  :=
+  P\cap\mathcal{KG}_\tau
+  \\
+  P^-_\tau
+  :=
+  P\backslash\mathcal{KG}_\tau
+  \end{cases}
+  \] 
+  avec&nbsp;:
+  \[
+  \begin{cases}
+  \mathcal{C}^+_\tau
+  \left(P\right)
+  :=
+  \mathcal{C}_\tau\left(P\cap\mathcal{KG}_\tau\right)
+  \\
+  \mathcal{C}^-_\tau
+  \left(P\right)
+  :=
+  \mathcal{C}_\tau
+  \left(P\backslash \mathcal{KG}_\tau\right). 
+  \end{cases} 
+  \] 
+  
+  <!--
+  Normalement cette espace 
+       topologique 
+       et connexe.
+  --> 
+  </p>
+  <h4>Questionnement[..] ( en cours de recherche ) </h4>
+   <p class='box'>
+    <span class='noteredact'>
+    ici on ce questione sur des problématiques extrêmement fondamentale m justement l'inspiration et appliquée, technique.
+    en faite les mathématiques sont un peu comme un monde observer..
+  </span>
+    On peut penser au forcing [ <name>Cohen</name>] ( principe de choix.. ) 
+    par exemple on va essayer de rajouter un ensemble \(\mathcal{T}\) de symbole de prédicat pour former finiment représenter le schéma pour ensuite obtenir un ensemble 
+    \(E_\mathcal{T}\left(P\right) \subseteq \mathcal{C}_\tau\left(P\right)..\) 
+    pour ensuite former une topologie&nbsp;: 
+  ...
+   </p>
+   
+    <!-- foireu : <span class='.explaine'>
+      On peut déjà envisager que les différentes variables \(K, F, A\) et leur place dans  
+      \(
+      \mathcal{G}_\tau\left(K, F, A\right)
+      \)  
+      peuvent jouer un rôle particulier notamment dans les cas où au moins une des formules de l'ensemble&nbsp;: 
+      \[\left\{F,A_0,A_1\right\}\]  possède des paramètre
+      puisque 
+      lorsque \(K\) n'est pas constructible ou nécessite des paramètres pour être représentable, 
+      alors les menbre de l'égalité précédente  constate que si \(K\) n'est pas constructible ou nécessite des paramètres alors on a besoin d'une formule paramètrer&nbsp;: 
+      \(
+      K^\prime 
+      \) tell que sa valeur correspond à l'ensemble \(K\) mais si \(K\) n'est pas représentable avec ou sans paramètre alors on ne peut commuter \(K\) de place avec la dernière égalité. 
+    </span>-->
+   </p>
+ </div>
+ <!-- zone foutoir : -->
+ <div style='margin-top:700px;height:1024px;'>
+   On peut former aussi les produits&nbsp;: 
+  \[
+  \begin{cases}
+  \lambda ._l A:=\left(\lambda \wedge A_0, A_1\right)\\
+  \lambda._r A:=\left(A_0, \lambda\wedge A_1\right). 
+  \end{cases} 
+  \]
+ </div> 
+ <div style='margin-top:700px;height:1024px;'>
+ </div>
+ <!-- zone : foutoir : -->
+ <div id='odoc'>
+ <h3>[exemple] En pause</h3>
+ <span class='box'> juste une étape de 
+ modélisation <span style='text-align:right;'></span>
+ </span>
+
+    <div class='box'>      <h3>Pour la codification des simulations</h3>
+      <span class='box'>
+        On vas devoir scripter pour générer des exemples...
+      </span>
+
+       <div>
+         <h4>Ensemble des
+         nœuds [ souvent notées 
+        \(u_0..,v_0..\) ]</h4>
+         <div>[ Correspond à la \(\mathcal{L}\) -structure souvent notée \(M\) dans ce document ]</div>
+       <h4>
+         Liste des observations [ souvent notées 
+         \(O\left(u_n, v_n\right) , O_0\left(..\right) ,..\) ] 
+      </h4>       
+      <span class='box'>
+         On les représente avec des formules du premier
+         order sur la signature \(\mathcal{L}.\)
+       </span>
+       <ol>
+        ..
+       </ol>
+       <span class='noteredact'>Deux familles d'événements&nbsp;: \(\left(a_{i,j}\left(u_n, v_n\right)\right)_{j \leq \kappa};i=0..1\)</span>
+       <h4>
+         Listes événements [ souvent notées \(a_i\left(u_n, v_n\right);i=0..1\) ] 
+       </h4>
+       <span class='box'>
+         On les représente avec des formules du premier 
+         order sur la signature \(\mathcal{L}.\) 
+       </span>
+       <ol>
+        ...
+       </ol>
+     </ol>
+     <h4>Liste des assertions [ souvent notées \(\mathcal{F},..\) ] </h4>       <span class='box'>
+         On les représente avec des formules du premier 
+         order sur la signature \(\mathcal{L}.\) 
+       </span>
+     <dl>
+       <dt>Noms des assertions [ \(F\left(u, v, t\right), 
+       G..\) ] </dt>
+       <dd>
+        ...
+       </dd>
+     </dl>
+     </div>
+     <h4>Graphe de représentation avec \(K=M^4\)</h4>
+     <span class='box'>
+       On représente
+       \[\mathcal{G}_M
+       \left(K,F_i,A\right)\] 
+       pour \(i:=0..\alpha\)
+     </span>
+     <h5>liste des graphe de représentation</h5>
+     <dl>
+       <dt>Liste des graphes de représentation</dt>
+       <dd class='box'>
+         On représentera ces graphe avec la structure de données
+         suivante&nbsp;: 
+         <dl>
+           <dt>arcs&nbsp;: </dt>
+           <dd>[représentant minimal de classe ,Neoud,Neoud]
+           <span class='box' style='border:solid 0px white;'>
+             On ne peut pas juste 
+             utiliser un représentant de l'assertions car deux assertions peuvent donner le même graphe...
+           </span>
+           </dd>
+         </dl>
+       </dd>
+     </dl>
+     </div>
+ </div>
+     <!-- pause : réflexion.-->
+      <div style='margin-top:700px;height:1024px;'>
+     </div>
+     <h4>Constatation formelle sur les la fiches de simulation</h4>
+     <div>
+       
+     </div>
+     </div>
+     <div class='box'>
+       On vas utiliser les fiches comme avec des sequent.
+       Ensuite on va utiliser cette méthode avec une récursion ( un peu comme avec la curryfication ) 
+     <span id='frml' class='gen'>
+     	
+     </span>
+     </div>
+     <div style='margin-top:700px;height:1024px;'>
+ </div>
+ akoerakoerman@gmail.com
+ <br>
+ mon curateur et un tueur..
+  </div>
+</body>
+<!- To-do :-->
+<script>
+
+console.log("To-do&nbsp;: ");
+console.log("Faire un générateur de 'odoc.html'");
+console.log("On vas utiliser uniquement des '{Array}'");
+template_odoc=
+[
+  ["nœud.."],
+  ["Observation.."],
+  ["événement.."],
+  ["assertions.."]
+];
+console.log(template_odoc);
+
+/*
+Formalisation : 
+*/
+console.log("IMPORTANT : ");
+console.log("On va travailler : ");
+console.log("avec les fiches FORMELLE");
+function copy_past_odoc(to_past){
+  let d=document.getElementById("odoc").innerHTML;
+  console.log(d);
+  document.getElementById(to_past).innerHTML=d
+}
+copy_past_odoc("frml");
+/*
+il tont tué ouvertement 
+      Mamma..il le font 
+pour les autres.. Si on peut stopper sa..
+*/
+</script>
+<!--<script>
+  console.log("par [Ak-R|adok kappa|le dri]");
+  console.log("akoerakoerman@gmail.com");
+  for(let i=0;i<3;i++){
+    console.log("mon curateur et un tueur");
+  }
+  j=0;
+  window.setInterval(function()
+    {
+      
+      console.log("mon curateur et un tueur..");
+      if((j+3*j*j+j%2)%25<5)
+      console.log("Mon père aussi");
+      j++;
+      if(j%7==0)
+      {
+        console.log("34 de guerre ")
+      }
+    },
+    200
+  );-->
+  <!-- J'aime les maths le café et et les clope et la paye.
+  -->
+</script>
+</html>
